@@ -1,0 +1,6 @@
+streamlit
+psycopg2-binary
+openai
+pydub
+audio-recorder-streamlit
+
