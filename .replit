@@ -1,5 +1,5 @@
 # The command that runs the program. If the interpreter field is set, it will have priority and this run command will do nothing
-run = "python3 main.py"
+run = "streamlit run --server.address 0.0.0.0 --server.headless true --server.enableCORS=false --server.enableWebsocketCompression=false main.py"
 
 # The primary language of the repl. There can be others, though!
 language = "python3"
@@ -11,20 +11,6 @@ hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
 # Specifies which nix channel to use when building the environment.
 [nix]
 channel = "stable-22_11"
-
-# The command to start the interpreter.
-[interpreter]
-  [interpreter.command]
-  args = [
-    "stderred",
-    "--",
-    "prybar-python310",
-    "-q",
-    "--ps1",
-    "\u0001\u001b[33m\u0002\u0001\u001b[00m\u0002 ",
-    "-i",
-  ]
-  env = { LD_LIBRARY_PATH = "$PYTHON_LD_LIBRARY_PATH" }
 
 [env]
 VIRTUAL_ENV = "/home/runner/${REPL_SLUG}/venv"
@@ -105,4 +91,6 @@ pattern = "**/*.py"
 start = "pylsp"
 
 [deployment]
-run = ["sh", "-c", "python3 main.py"]
+run = ["sh", "-c", "echo ‘test@gmail.com’ | streamlit run --server.address 0.0.0.0 --browser.serverPort=80 --browser.serverAddress=audio-survey-petergostev.replit.app main.py"]
+ignorePorts = false
+deploymentTarget = "gce"
