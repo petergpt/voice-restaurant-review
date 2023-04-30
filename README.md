@@ -1,6 +1,6 @@
 # Voice Restaurant Reviews
 
-Voice Restaurant Reviews is a web application that allows users to record, transcribe, and summarize voice-based restaurant reviews. Users can submit their voice recordings, which are then transcribed and summarized using OpenAI's GPT-4 model. The application is built using Python, Streamlit, and the OpenAI API.
+Voice Restaurant Reviews is a web application that allows users to record, transcribe, and summarize voice-based restaurant reviews. Users can submit their voice recordings, which are then transcribed using Open AI's Whisper and summarized using OpenAI's GPT-4 model. The application is built using Python, Streamlit, and the OpenAI API.
 
 ## Table of Contents
 - [Features](#features)
