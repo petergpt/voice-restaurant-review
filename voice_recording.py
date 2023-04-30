@@ -4,7 +4,7 @@ import os
 
 
 def save_voice_recording(audio_bytes, duration):
-    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".wav")
+    return audio_bytes, duration
     temp_file.write(audio_bytes)
     temp_file.close()
 
